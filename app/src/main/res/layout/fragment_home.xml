@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.Fragments.HomeFragment">
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <TextView
+           android:id="@+id/tvNoDataFoundEmptyList"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="No Data Found"
+           android:textSize="28sp"
+           android:visibility="gone"
+           android:textColor="#5E5757"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <LinearLayout
+           android:id="@+id/linearLayout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:gravity="center_vertical"
+           android:layout_margin="10dp"
+           android:paddingBottom="10dp"
+           android:paddingTop="10dp"
+           android:background="@drawable/btn_filter_shape"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+
+          <LinearLayout
+              android:id="@+id/ivAllNotes"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+              <ImageView
+                  android:layout_width="25dp"
+                  android:layout_height="25dp"
+                  android:layout_marginStart="15dp"
+                  android:src="@drawable/ic_baseline_filter_list_24"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="18sp"
+                  android:textColor="@color/white"
+                  android:text="All Notes"/>
+          </LinearLayout>
+
+
+           <LinearLayout
+               android:id="@+id/tvFilterHigh"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="15dp">
+
+               <ImageView
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:layout_marginStart="5dp"
+                   android:background="@drawable/starticon"
+                   android:paddingStart="25dp"
+                   android:paddingEnd="25dp"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:text="High"/>
+               <TextView
+                   android:layout_marginStart="3dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="18sp"
+                   android:text="Important"
+                   android:textColor="#FEC007"/>
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/tvFilterMedium"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="25dp">
+
+               <ImageView
+                   android:layout_marginTop="3dp"
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:layout_marginStart="5dp"
+                   android:background="@drawable/ic_baseline_star_24"
+                   android:paddingStart="25dp"
+                   android:paddingEnd="25dp"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"/>
+               <TextView
+                   android:layout_marginStart="4dp"
+                   android:layout_marginTop="2dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Regular"
+                   android:textColor="@color/white"
+                   android:textSize="18sp"/>
+
+           </LinearLayout>
+
+<!--           <TextView-->
+<!--               android:id="@+id/tvFilterLow"-->
+<!--               android:layout_width="wrap_content"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:textColor="#3CE316"-->
+<!--               android:textSize="18sp"-->
+<!--               android:layout_marginStart="10dp"-->
+<!--               android:background="@drawable/btn_filter_shape"-->
+<!--               android:paddingStart="25dp"-->
+<!--               android:paddingEnd="25dp"-->
+<!--               android:paddingTop="10dp"-->
+<!--               android:paddingBottom="10dp"-->
+<!--               android:text="Low"/>-->
+
+       </LinearLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rvAllNotes"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginStart="8dp"
+           android:layout_marginEnd="8dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:id="@+id/fabAddNote"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_baseline_edit_24"
+           android:layout_margin="30dp"
+           android:backgroundTint="#77676A"
+           app:borderWidth="0dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
